@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import propTypes from "prop-types";
 import ContactItem from "../ContactItem/ContactItem";
 
-class ContactList extends Component {
-  render() {
-    const { contacts, onDeleteContact } = this.props;
+ function ContactList ({ contacts, onDeleteContact }) {
 
     return (
       <ul>
@@ -17,7 +15,6 @@ class ContactList extends Component {
       </ul>
     );
   }
-}
 
 ContactList.propTypes = {
   contacts: propTypes.array.isRequired,
